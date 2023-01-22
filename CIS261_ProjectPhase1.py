@@ -57,10 +57,10 @@ if __name__ == "__main__":
             break
         # write the code to assign to hours the return value from GetHoursWorked
          # write the code to assign to hourlyrate the return value from GetHourlyRate
-        hours = GetHoursWorked()
-        hourlyrate = Gethourlyrate()
+        hours = get_total_hours()
+        hourly_rate = get_hourly_rate()
        #write the code to assign to taxrate the return value from GetTaxRate
-        taxrate = GetTaxRate()
+        tax_rate = get_tax_rate()
         grosspay, incometax, netpay = CalcTaxAndNetPay(hours, hourlyrate, taxrate)
         printinfo(empname,hours, hourlyrate, grosspay, taxrate, incometax, netpay)
 
