@@ -32,7 +32,7 @@ def printinfo(empname, hours, hourlyrate,grosspay, taxrate, incometax, netpay):
     # taxrate needs to be formatted as percentage
     print("Hourly rate:", hourlyrate)
     print("Gross pay:", grosspay)
-    print("Tax rate:", taxrate)
+    print("Tax rate:", taxrate/100)
     print("Income tax:", incometax)
     print("Net pay:", netpay)
     print()
