@@ -1,4 +1,6 @@
-
+# Donna Colburn
+# CIS261
+# ProjectPhase1
 
 
 def GetEmpName():
@@ -15,7 +17,7 @@ def GetHourlyRate():
     return hourlyrate
 # write the GetTaxRate function
 def GetTaxRate():
-    taxrate = float(input("Enter tax rate (in %): "))
+    taxrate = float(input("Enter tax rate: "))
     return taxrate
 
 
@@ -26,15 +28,16 @@ def CalcTaxAndNetPay(hours, hourlyrate, taxrate):
     return grosspay, incometax, netpay
 
 def printinfo(empname, hours, hourlyrate,grosspay, taxrate, incometax, netpay):
+    print()
     print("Name:  ", empname) 
     print("Hours Worked: ", f"{hours:,.2f}")
     # write the lines of code to display hourlyrate, grosspay, taxrate, incometax and netpay with correct formatting
     # taxrate needs to be formatted as percentage
-    print("Hourly rate:", hourlyrate)
-    print("Gross pay:", grosspay)
-    print("Tax rate:", taxrate / 100)
-    print("Income tax:", incometax)
-    print("Net pay:", netpay)
+    print(f"Hourly rate: ", f"{hourlyrate:,.2f}")
+    print(f"Gross pay: ", f"{grosspay:,.2f}") 
+    print(f"Tax Rate: ", f"{taxrate:,.2f}")
+    print(f"Income tax: ", f"{incometax:,.2f}")
+    print(f"Net pay:", f"{netpay:,.2f}")
     print()
 def PrintTotals(TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay):    
     print()
@@ -68,14 +71,12 @@ if __name__ == "__main__":
         TotHours += hours
         # write the code to increment the other total variables with the appropriate values
         TotGrossPay += grosspay
-        TotTax += incometax
+        TotTax += taxrate
         TotNetPay += netpay
-        
+        print()
  
 
 
 PrintTotals (TotEmployees, TotHours, TotGrossPay, TotTax, TotNetPay)
 print()
-
-
 
